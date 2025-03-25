@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos & Dúvidas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .faq-item {
+            margin: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .faq-item button {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .faq-item button:hover {
+            background-color: #ddd;
+        }
+        .faq-content {
+            display: none;
+            padding: 12px;
+            font-size: 16px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+        .gif-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .gif-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Animação do emoji */
+        .emoji {
+            display: inline-block;
+            font-size: 24px;
+            animation: mortal 2s infinite ease-in-out;
+        }
+
+        @keyframes mortal {
+            0% { transform: rotateY(0) translateY(0); }
+            50% { transform: rotateY(360deg) translateY(-20px); }
+            100% { transform: rotateY(720deg) translateY(0); }
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="gif-container">
+    <img src="https://i.postimg.cc/wBCX42GH/gojo-gojo-satoru.gif" alt="GIF">
+</div>
+
+<div class="container">
+    <h2><span class="emoji">💰</span> Termos de Reembolso <span class="emoji">💰</span></h2>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('reembolso')">QUANDO POSSO PEDIR REEMBOLSO?</button>
+        <div id="reembolso" class="faq-content">
+            <p>1- Quando a conta vier caída ou precisar trocar de senha.</p>
+            <p>2- É obrigatório gravar sua tela desde a compra e também ao entrar na conta para provar que a conta veio com senha errada.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('arrependimento')">ME ARREPENDI DE COMPRAR</button>
+        <div id="arrependimento" class="faq-content">
+            <p>Se você se arrependeu de ter comprado, isso não é motivo de reembolso. Leia a descrição do produto antes de comprar.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('garantia')">OS PRODUTOS TÊM GARANTIA?</button>
+        <div id="garantia" class="faq-content">
+            <p>Sim, os produtos têm garantia de até 2 horas. Alguns podem ter até mais garantia.</p>
+        </div>
+    </div>
+
+    <h2><span class="emoji">❓</span> Dúvidas Frequentes <span class="emoji">❓</span></h2>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('receber-produto')">Como recebo meu produto que comprei pelo site?</button>
+        <div id="receber-produto" class="faq-content">
+            <p>Siga os passos das imagens:</p>
+            <img src="https://i.postimg.cc/VksDXK3V/IMG-20250324-WA0436.jpg" alt="Passo 1">
+            <p>1- Após a compra, aperte no seu perfil.</p>
+            <img src="https://i.postimg.cc/NMX4QSH5/IMG-20250324-WA0437.jpg" alt="Passo 2">
+            <p>2- Aperte em compras.</p>
+            <img src="https://i.postimg.cc/3rgBVMhq/IMG-20250324-WA0439.jpg" alt="Passo 3">
+            <p>3- Aperte em ver compras.</p>
+            <img src="https://i.postimg.cc/zX8j1dXG/IMG-20250324-WA0440.jpg" alt="Passo 4">
+            <p>4- Aperte em visualizar.</p>
+            <p>Seu produto aparecerá no formato "usuário:senha".</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('afiliado')">O que é afiliado?</button>
+        <div id="afiliado" class="faq-content">
+            <p>Afiliado é quando você tem um link de divulgação. Se alguém comprar pelo seu link, você recebe uma comissão de 20% das vendas. Quanto maior o valor do produto comprado pelo seu link, maior será seu lucro.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('sacar-dinheiro')">Como saco o dinheiro do site de afiliados?</button>
+        <div id="sacar-dinheiro" class="faq-content">
+            <p>Siga os passos:</p>
+            <img src="https://i.postimg.cc/VksDXK3V/IMG-20250324-WA0436.jpg" alt="Passo 1">
+            <p> Aperte no seu perfil.</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 2">
+            <p> Aperte em "Afiliado".</p>
+            <img src="https://i.postimg.cc/RVgcx4Dg/IMG-20250324-WA0456.jpg" alt="Passo 3">
+            <p> Seu saldo aparecerá na carteira do site.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button onclick="toggleContent('como-afiliado')">Como me torno afiliado?</button>
+        <div id="como-afiliado" class="faq-content">
+            <p>Siga os passos abaixo para se tornar um afiliado:</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 1">
+            <p>Aperte aqui no seu perfil, se não tiver faça login apertando em <a href="https://gojostore1.ereembystore.shop/" target="_blank">"entrar"</a>.</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 2">
+            <p>Aperte em afiliado.</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 3">
+            <p>Desça até achar uma opção "criar link" e aperte lá.</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 4">
+            <p>Bote qualquer nome (opcional) e aperte em confirma.</p>
+            <img src="https://i.postimg.cc/9FmGkrJ4/IMG-20250324-WA0454.jpg" alt="Passo 5">
+            <p>Agora é só divulgar seu link e esperar alguém comprar por ele. Seu ganho é de 20% de comissão. Quanto mais caro for o produto, maior será seu lucro.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
